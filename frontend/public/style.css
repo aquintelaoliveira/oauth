@@ -1,0 +1,258 @@
+:root {
+    --color-tone-1: #d7dadc;
+    --color-tone-2: #818384;
+    --color-tone-3: #565758;
+    --color-tone-4: #3a3a3c;
+    --color-tone-5: #272729;
+    --color-tone-6: #1a1a1b;
+    --color-tone-7: #121213;
+    --opacity-50: rgba(0, 0, 0, 0.5);
+}
+
+:root {
+    /*color*/
+    --green: #47cf73;
+    --darkendGreen: #26974b;
+    --yellow: #c9b458;
+    --darkendYellow: #b59f3b;
+    --lightGray: #d8d8d8;
+    --gray: #86888a;
+    --darkGray: #939598;
+    --white: #fff;
+    --black: #212121;
+    --orange: #f5793a;
+    --blue: #76daff;
+
+    --cp-color-link: var(--blue);
+    --cp-button-color: var(--color-tone-1);
+    --cp-button-hover-color: var(--cp-button-color);
+    --cp-button-bg: var(--green);
+    --cp-button-border-width: 3px;
+    --cp-button-border-radius: 4px;
+    --cp-button-margin-block: 1px;
+    --cp-button-margin-inline: 10px;
+    --cp-button-padding-inline: 16px;
+    --cp-button-padding-block: 10px;
+}
+
+:root {
+    --color-background: var(--color-tone-5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    color: var(--color-tone-1);
+    background-color: var(--color-background);
+    background: var(--black) url(https://cpwebassets.codepen.io/assets/logos/codepen-logo-pattern-b477875ac66ffc21e4485a989358c220fac283caf17e602346a50d4250970254.png);
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+}
+
+.login-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-header {
+    margin: 0px 0 20px;
+    font-family: 'Telefon', Sans-Serif;
+}
+
+.little-big-header {
+    margin: 0;
+    font-size: 4.5rem;
+    color: var(--white);
+}
+
+.login-flex-grid {
+    display: flex;
+}
+
+/*..........LOGIN..........*/
+
+.username-login-container {
+    padding-right: 10%;
+    width: 55%;
+}
+
+.field {
+    margin: 0 0 20px;
+}
+
+.label-form label {
+    font-weight: 400;
+    display: block;
+    margin: 0 0 3px;
+    letter-spacing: .5px;
+    color: var(--color-tone-1);
+}
+
+.field input[type=text],
+.field input[type=password] {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: 1.3rem;
+}
+
+input[type=text], 
+input[type=email], 
+input[type=password] {
+    font-size: 12px;
+    padding: 4px 5px;
+    outline: 0;
+    background: var(--color-tone-1);
+    border: 3px solid var(--color-tone-1);
+    border-radius: 3px;
+}
+
+/*..........DIVIDER..........*/
+
+.login-divider {
+    width: 0%;
+    position: relative;
+}
+
+.login-divider .bar {
+    position: absolute;
+    height: 40%;
+    width: 2px;
+    background: var(--color-tone-1);
+}
+
+.login-divider .bar-top {
+    top: 0;
+}
+
+.divider-or {
+    position: absolute;
+    top: 41%;
+    height: 18%; /* =100% -41% -41% */
+    width: 46px;
+    left: -23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid var(--color-tone-1);
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+    color: var(--color-tone-1);
+}
+
+.login-divider .bar-bottom {
+    bottom: 0;
+}
+
+/*..........OAUTH..........*/
+
+.oauth-login-container {
+    padding-left: 10%;
+    width: 45%;
+}
+
+/*..........SIGNIN..........*/
+
+.signup-callout {
+    display: block;
+    padding: 20px;
+    position: relative;
+    background: var(--color-tone-4);
+    border-radius: 6px;
+    margin: 0 0 20px;
+}
+
+.signup-callout {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/*..........BUTTON..........*/
+.button {
+    position: relative;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none!important;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    background: var(--cp-button-bg);
+    color: var(--cp-button-color);
+    padding: var(--cp-button-padding);
+    margin: var(--cp-button-margin);
+    border-radius: var(--cp-button-border-radius);
+    border: var(--cp-button-border-width) solid transparent;
+    --cp-button-hover-bg: var(--color-tone-7);
+    --cp-button-padding: var(--cp-button-padding-block) var(--cp-button-padding-inline);
+    --cp-button-margin: var(--cp-button-margin-block) var(--cp-button-margin-inline) var(--cp-button-margin-block) 0;
+}
+
+.button:hover, .button:focus {
+    background: var(--cp-button-hover-bg,var(--cp-button-bg))!important;
+    color: var(--cp-button-hover-color,var(--cp-button-color))!important;
+    outline-offset: 3px;
+}
+
+.button.log-in {
+    --cp-button-bg: var(--green);
+    --cp-button-color: var(--black);
+    --cp-button-hover-bg: var(--darkendGreen);
+}
+
+.social-account-button {
+    padding-left: 60px;
+    text-align: left;
+    margin: 0 0 10px;
+}
+
+.social-account-button svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--color-tone-1);
+    position: absolute;
+    left: 14px;
+    top: 6px;
+}
+
+.google-button:hover, .google-button:focus, 
+.github-button:hover, .github-button:focus, 
+.facebook-button:hover, .facebook-button:focus {
+    outline: 2px solid var(--color-tone-3);
+    outline-offset: -2px;
+}
+
+.google-button {
+    --cp-button-bg: #d15e56;
+}
+
+.github-button {
+    --cp-button-bg: #57606a;
+}
+
+.facebook-button {
+    --cp-button-bg: #036ce5;
+}
+
+/*..........LINKS..........*/
+
+#forgot-password-link {
+    text-align: center;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cp-color-link);
+}
